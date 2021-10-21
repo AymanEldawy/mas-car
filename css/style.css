@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Saira+Condensed:wght@200;300;400;500&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
+html,
+body {
+  direction: rtl;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 2000px;
+  color: #777;
+  font-family: "Saira Condensed", sans-serif;
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  background: none;
+}
+
+header .nav-link,
+header a {
+  color: #eee;
+}
+
+header.show-bg {
+  background: #e8e7e7;
+  border-bottom: 2px solid #cac7c7;
+}
+
+header.show-bg .nav-link,
+header.show-bg a {
+  color: #222;
+}
+
+header.show-bg .nav-top {
+  display: none;
+}
+
+header .nav-top {
+  padding: 5px;
+  border-bottom: inherit;
+}
+
+header .nav-top .links {
+  margin-top: 5px;
+}
+
+header .nav-top .links a {
+  font-size: 13px;
+  padding: 2px 6px;
+  background: #2d2828;
+  border-radius: 50%;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+header .navbar button i {
+  color: #666;
+}
+
+header .navbar .collapse .navbar-nav {
+  margin-right: auto !important;
+}
+
+.slide {
+  position: relative;
+}
+
+.slide:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f0d0d8c;
+  z-index: 1;
+}
+
+.slide img {
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slide .carousel-overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  z-index: 2;
+  max-width: 600px;
+  min-width: 90%;
+}
+
+.slide .carousel-overlay-content h1 {
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+}
+
+.slide .carousel-overlay-content h3 {
+  font-size: 2rem;
+}
+
+.slide .carousel-overlay-content p {
+  font-size: 1.5rem;
+}
+
+.slide .carousel-overlay-content button {
+  border-radius: 20px;
+  padding: 7px 25px;
+}
+/*# sourceMappingURL=style.css.map */
