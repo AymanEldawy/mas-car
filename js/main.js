@@ -4,7 +4,7 @@ $(function () {
     loop: true,
     margin: 10,
     autoplayTimeout: 3000,
-    // autoplayHoverPause: true,
+    autoplayHoverPause: true,
     autoplay: true,
     responsiveClass: true,
     responsive: {
