@@ -6,7 +6,7 @@ $(function () {
     loop: true,
     margin: 10,
     autoplayTimeout: 3000,
-    autoplayHoverPause: true,
+    // autoplayHoverPause: true,
     autoplay: true,
     responsiveClass: true,
     responsive: {
@@ -16,12 +16,11 @@ $(function () {
       },
       600: {
         items: 3,
-        nav: false
+        nav: true
       },
       1000: {
         items: 5,
-        nav: true,
-        loop: false
+        nav: true
       }
     }
   }); // $('.play').on('click', function () {
