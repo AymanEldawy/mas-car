@@ -303,12 +303,14 @@ header {
       display: flex;
       flex-wrap: wrap;
       margin-top: 20px;
-      justify-content:space-between;
+      justify-content: space-between;
+
       li {
-        flex:1;
+        flex: 1;
         text-align: right;
         min-width: 50%;
         margin-top: 5px;
+
         i {
           border-radius: 50%;
           background: #10111075;
@@ -316,6 +318,7 @@ header {
           padding: 3px;
           font-size: 12px;
         }
+
         span {
           white-space: pre;
         }
@@ -458,7 +461,9 @@ header {
       &:nth-of-type(3),
       &:nth-of-type(4),
       &:nth-of-type(7),
-      &:nth-of-type(8) {
+      &:nth-of-type(8) ,
+      &:nth-of-type(11) ,
+      &:nth-of-type(12) {
         figure {
           order: 2;
         }
@@ -474,7 +479,9 @@ header {
       &:nth-of-type(1),
       &:nth-of-type(3),
       &:nth-of-type(5),
-      &:nth-of-type(7) {
+      &:nth-of-type(7),
+      &:nth-of-type(9),
+      &:nth-of-type(11) {
         figure {
           order: 2;
         }
@@ -558,16 +565,17 @@ footer {
 
     h4 {
       font-size: 1rem;
-      margin-bottom:10px;
+      margin-bottom: 10px;
+
       a {
-        color :$mainColor
+        color: $mainColor
       }
     }
   }
 
   iframe {
     width: 100%;
-    min-height:300px;
+    min-height: 300px;
   }
 
   .copy-right {
@@ -627,5 +635,84 @@ footer {
       font-size: 20px;
     }
 
+  }
+}
+
+.address {
+  .mb-3:first-of-type {
+    p {
+      font-size: 20px;
+      color: #888;
+    }
+  }
+
+  .d-flex {
+    flex-direction: column;
+
+    a {
+      font-size: 18px;
+
+      i {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+
+.fixed-links {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  z-index: 99;
+
+  i {
+    font-size: 25px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 10px;
+    background: #f0b21e;
+    color: #fff;
+    cursor:pointer;
+    &.opened{
+      background: #222;
+      opacity: .2;
+    }
+  }
+
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    max-height:0;
+    overflow:hidden;
+    @extend %transition;
+
+    span {
+      opacity:0;
+    }
+    a {
+      margin-bottom:10px;
+
+    }
+    a:hover span {
+      opacity:1;
+      font-size:18px;
+      color:#222;
+    }
+    a:first-of-type i{
+      background:#085;
+    }
+    a:last-of-type i {
+      background:#f02;
+    }
+    &.open-menu {
+      max-height: 150px;
+    }
+    
   }
 }

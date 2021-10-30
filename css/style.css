@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600&family=Lemonada:wght@300;600&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
-.links a, .services .card figure img, .works .works__box figure img {
+.links a, .services .card figure img, .works .works__box figure img, .fixed-links .menu-links {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -412,12 +412,12 @@ header .navbar .collapse .navbar-nav .nav-link:hover {
 }
 
 @media (min-width: 768px) {
-  .works .col-md-6:nth-of-type(3) figure, .works .col-md-6:nth-of-type(4) figure, .works .col-md-6:nth-of-type(7) figure, .works .col-md-6:nth-of-type(8) figure {
+  .works .col-md-6:nth-of-type(3) figure, .works .col-md-6:nth-of-type(4) figure, .works .col-md-6:nth-of-type(7) figure, .works .col-md-6:nth-of-type(8) figure, .works .col-md-6:nth-of-type(11) figure, .works .col-md-6:nth-of-type(12) figure {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  .works .col-md-6:nth-of-type(3) h3, .works .col-md-6:nth-of-type(4) h3, .works .col-md-6:nth-of-type(7) h3, .works .col-md-6:nth-of-type(8) h3 {
+  .works .col-md-6:nth-of-type(3) h3, .works .col-md-6:nth-of-type(4) h3, .works .col-md-6:nth-of-type(7) h3, .works .col-md-6:nth-of-type(8) h3, .works .col-md-6:nth-of-type(11) h3, .works .col-md-6:nth-of-type(12) h3 {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -425,12 +425,12 @@ header .navbar .collapse .navbar-nav .nav-link:hover {
 }
 
 @media (max-width: 767px) {
-  .works .col-md-6:nth-of-type(1) figure, .works .col-md-6:nth-of-type(3) figure, .works .col-md-6:nth-of-type(5) figure, .works .col-md-6:nth-of-type(7) figure {
+  .works .col-md-6:nth-of-type(1) figure, .works .col-md-6:nth-of-type(3) figure, .works .col-md-6:nth-of-type(5) figure, .works .col-md-6:nth-of-type(7) figure, .works .col-md-6:nth-of-type(9) figure, .works .col-md-6:nth-of-type(11) figure {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  .works .col-md-6:nth-of-type(1) h3, .works .col-md-6:nth-of-type(3) h3, .works .col-md-6:nth-of-type(5) h3, .works .col-md-6:nth-of-type(7) h3 {
+  .works .col-md-6:nth-of-type(1) h3, .works .col-md-6:nth-of-type(3) h3, .works .col-md-6:nth-of-type(5) h3, .works .col-md-6:nth-of-type(7) h3, .works .col-md-6:nth-of-type(9) h3, .works .col-md-6:nth-of-type(11) h3 {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -519,6 +519,7 @@ footer .container h4 a {
 
 footer iframe {
   width: 100%;
+  min-height: 300px;
 }
 
 footer .copy-right {
@@ -583,5 +584,90 @@ footer .copy-right {
 .contact-us .contact__info p {
   color: #666;
   font-size: 20px;
+}
+
+.address .mb-3:first-of-type p {
+  font-size: 20px;
+  color: #888;
+}
+
+.address .d-flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.address .d-flex a {
+  font-size: 18px;
+}
+
+.address .d-flex a i {
+  margin-left: 10px;
+}
+
+.address img {
+  max-width: 100%;
+}
+
+.fixed-links {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  z-index: 99;
+}
+
+.fixed-links i {
+  font-size: 25px;
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 10px;
+  background: #f0b21e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.fixed-links i.opened {
+  background: #222;
+  opacity: .2;
+}
+
+.fixed-links .menu-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.fixed-links .menu-links span {
+  opacity: 0;
+}
+
+.fixed-links .menu-links a {
+  margin-bottom: 10px;
+}
+
+.fixed-links .menu-links a:hover span {
+  opacity: 1;
+  font-size: 18px;
+  color: #222;
+}
+
+.fixed-links .menu-links a:first-of-type i {
+  background: #085;
+}
+
+.fixed-links .menu-links a:last-of-type i {
+  background: #f02;
+}
+
+.fixed-links .menu-links.open-menu {
+  max-height: 150px;
 }
 /*# sourceMappingURL=style.css.map */

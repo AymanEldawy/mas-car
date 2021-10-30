@@ -417,6 +417,7 @@ footer .container h4 a {
 }
 footer iframe {
   width: 100%;
+  min-height: 300px;
 }
 footer .copy-right {
   margin: 15px 0 0 !important;
